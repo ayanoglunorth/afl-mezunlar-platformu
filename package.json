@@ -1,0 +1,45 @@
+{
+  "name": "afl-mezunlar-platformu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean:open-next": "node scripts/clean-open-next.js",
+    "build": "npm run clean:open-next && next build && opennextjs-cloudflare build --skipNextBuild",
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "eslint",
+    "preview": "npm run clean:open-next && opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "npm run build && opennextjs-cloudflare deploy",
+    "upload": "npm run clean:open-next && opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.1099.0",
+    "@opennextjs/cloudflare": "^1.20.7",
+    "@phosphor-icons/react": "^2.1.10",
+    "@supabase/ssr": "^0.12.3",
+    "@supabase/supabase-js": "^2.110.6",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "next": "16.3.8",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0",
+    "xlsx": "npm:@keep-lts/xlsx@^0.18.6"
+  },
+  "overrides": {
+    "postcss": "^8.5.23",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.147.0"
+  }
+}

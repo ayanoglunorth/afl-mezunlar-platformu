@@ -1,0 +1,2 @@
+-- Migration 061 intentionally contains no statements.
+-- Production-specific data cleanup is not part of the public schema.

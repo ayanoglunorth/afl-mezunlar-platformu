@@ -1,0 +1,2 @@
+-- Migration 059 intentionally contains no statements.
+-- Development-only forum account setup was removed before the public release.

@@ -1,0 +1,2 @@
+-- Migration 057 intentionally contains no statements.
+-- Forum demo data was removed before the public release.
